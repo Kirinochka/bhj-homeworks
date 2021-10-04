@@ -81,12 +81,14 @@ class Autocomplete {
         value: 'Содержимое атрибута value'
       }
     */
-    return [
-      {
-        text: 'Чубакка',
-        value: '1'
-      }
-    ];
+    return [...this.input.options]
+      .filter(opt => opt.text.includes(text))
+      .map(({text, value}) => {
+        return {
+          text,
+          value
+        }
+      });
   }
 }
 
