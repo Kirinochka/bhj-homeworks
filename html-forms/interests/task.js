@@ -1,4 +1,3 @@
-const list = document.querySelector('.interests_main > ul');
 const main = document.querySelector('.interests_main');
 
 const func = ({target}) => {
